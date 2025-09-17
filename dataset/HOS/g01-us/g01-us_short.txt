@@ -1,0 +1,24 @@
+As a patient, I want to access my own medical record, so that I can view my medical history 
+As a UHOPE employee, I want to enter patient information only once in the Electronic Medical Record 
+Database, so that I do not have to enter it multiple times in different databases 
+As a UHOPE employee, I want to view patient information that I am allowed to access that a UHOPE 
+employee from another department has entered into the Electronic Medical Record Database, so that 
+information does not need to be manually exchanged between different databases 
+As a receptionist, I want to search for a patient’s file in the Electronic Medical Record Database, so I 
+do not have to ask his or her information every time a patient calls for an appointment and enter it 
+manually 
+As a receptionist, I want to edit information in a patient’s file in the Electronic Medical Record Database 
+only once, so that I don’t have to edit it multiple times in different databases 
+As a doctor, I want to enter the appointment information into the system, so that I can check what I 
+did the next time the same patient comes in 
+As a doctor, I want to only access medical files from my own patients, so that no other doctor can 
+access the medical files of my patients 
+As a receptionist, I want to view the patient’s medical file, so that I can confirm that someone is the 
+right person for the appointment 
+As a patient, I want to see the results of a test that was performed on me, so that I can look at it 
+whenever I want 
+As a patient, I want to see what I have been treated for, so that I can get a better understanding of 
+how the doctor helped me 
+As a doctor, I want to edit a patient’s medical file, so that I can make sure they get the right vaccine 
+As UHOPE, I want to have an Electronic Medical Record Database that has access to the National 
+Database for Medical Records, so that we can gather the medical files of new patients

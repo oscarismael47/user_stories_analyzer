@@ -1,0 +1,19 @@
+streamlit
+langgraph
+langchain-openai
+langchain-groq
+plantuml
+streamlit-image-zoom
+reportlab
+#streamlit[pdf]
+streamlit-pdf-viewer
+
+## create env
+# uv venv --python 3.12
+
+## activate env
+# Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+# .venv\Scripts\Activate.ps1
+
+## install dependencies
+# uv pip install -r requirements.txt
