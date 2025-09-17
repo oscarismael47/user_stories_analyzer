@@ -39,13 +39,25 @@ def generate_user_stories_report(
 
     # Section 2: Processed Stories
     elements.append(Paragraph("2. Processed User Stories", styles["Heading2Bold"]))
-    for k, v in processed_stories.items():
-        elements.append(Paragraph(f"<b>{k}:</b>", styles["Normal"]))
-        elements.append(Paragraph(f"Original: {v['original_user_story']}", styles["Normal"]))
-        elements.append(Paragraph(f"Processed: {v['new_user_story']}", styles["Normal"]))
-        elements.append(Paragraph(f"Explanation: {v['explanation']}", styles["Normal"]))
-        elements.append(Spacer(1, 10))
-    elements.append(Spacer(1, 15))
+    if not processed_stories:
+        elements.append(Paragraph("User stories were not processed individually.", styles["Normal"]))
+        elements.append(Spacer(1, 15))
+    else:
+        for k, v in processed_stories.items():
+            elements.append(Paragraph(f"<b>{k}</b>", styles["Heading3"]))
+            elements.append(Spacer(1, 2))
+            elements.append(Paragraph(f"<b>Original:</b> {v['original_user_story']}", styles["Normal"]))
+            elements.append(Paragraph(f"<b>Processed:</b> {v['new_user_story']}", styles["Normal"]))
+            elements.append(Paragraph(f"<b>Explanation:</b>", styles["Normal"]))
+            # Si la explicación tiene secciones, intenta separarlas en líneas
+            explanation = v['explanation']
+            if ":" in explanation:
+                for part in explanation.split(". "):
+                    elements.append(Paragraph(f"- {part.strip()}", styles["Normal"]))
+            else:
+                elements.append(Paragraph(explanation, styles["Normal"]))
+            elements.append(Spacer(1, 12))
+        elements.append(Spacer(1, 15))
 
     # Section 3: General Analysis
     elements.append(Paragraph("3. General User Stories Analysis", styles["Heading2Bold"]))
@@ -77,7 +89,7 @@ def generate_user_stories_report(
     # Section 5: Diagram (if provided)
     if diagram_path:
         elements.append(Spacer(1, 20))
-        elements.append(Paragraph("5. User Stories Diagram", styles["Heading2Bold"]))
+        elements.append(Paragraph("5. User Stories Class Diagram", styles["Heading2Bold"]))
         try:
             img = Image(diagram_path, width=400, height=300)
             elements.append(img)

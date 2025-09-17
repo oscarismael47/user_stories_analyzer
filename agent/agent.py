@@ -16,13 +16,12 @@ from langgraph.types import Send
 ## GROQ
 GROQ_MODEL = st.secrets.get("GROQ_MODEL")
 GROQ_KEY = st.secrets.get("GROQ_KEY")
-# Initialize Groq LLM
-llm = ChatGroq(api_key=GROQ_KEY,model_name=GROQ_MODEL,temperature=0.7)
+llm = ChatGroq(api_key=GROQ_KEY,model_name=GROQ_MODEL,temperature=1)
 
 ## OPENAI
 OPENAI_MODEL = st.secrets.get("OPENAI_MODEL")
 OPENAIKEY = st.secrets.get("OPENAI_KEY")
-llm = ChatOpenAI(model=OPENAI_MODEL, api_key=OPENAIKEY, temperature=1)
+llm = ChatOpenAI(model=OPENAI_MODEL, api_key=OPENAIKEY, temperature=0.7)
 
 class UserStoryAnalysis(BaseModel):
     """
