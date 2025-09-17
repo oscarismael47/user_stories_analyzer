@@ -2,6 +2,8 @@
 
 A Streamlit-based application for analyzing, improving, and reporting on software user stories. The tool leverages LLMs (OpenAI/Groq via LangChain/LangGraph) to provide feedback, detect contradictions, suggest improvements, and generate UML class diagrams from user stories.
 
+![Example](.static/recording_1_b.gif)
+
 ---
 
 ## Features
